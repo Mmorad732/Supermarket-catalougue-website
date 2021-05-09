@@ -1,0 +1,106 @@
+<!DOCTYPTE html>
+<html>
+
+   <head>
+    <title> Deals </title>
+    <link rel="stylesheet" href="css/mystylesheet.css">
+    <script >
+    sessionStorage.setItem("loggeduser", '<?php session_start();  echo $_SESSION["loggeduser"];?>');
+    function terminatesession(){
+        <?php
+        session_unset();
+        session_destroy()
+        ?>
+        
+    }
+    </script>
+    <script src="js/javascript.js"></script>
+   </head>
+ <body onload="Page_load()">
+        <div id="header">
+          <div id="logo">
+         <a href="index.php">    <img src = "Images/logo.png" >  </a> 
+          </div>
+         <div id="signin"> 
+          <input type="button" onclick="opensignin()" value="Sign in" id="signinbtn"> 
+          <input type="button" onclick="signout()" value="Sign out" id="signoutbtn"> 
+          <label id="loginlbl"></label>
+           </div>
+           <div id="floatingMenu">
+          <img src="Images/menuicon.png" onclick="openNav()">
+          </div>
+           <div id ="search">
+            <input type="submit" value="Search">
+           <input type="text" name="Usersearch" placeholder ="Search here">
+          </div>
+          <div id="mySidenav" class="sidenav">
+                <a class="closebtn" onclick="closeNav()">&times;</a>
+            	  <a href="index.php">Home</a>
+                <a href="Categories.php">Categories</a>
+                <a href="About us.php">About us</a>
+                <a href="Contact us.php">Contact us</a>
+          </div>
+         
+      
+       </div>
+
+   <div id ="menu">
+         <ul>
+		            <li><a href="index.php">Home</a></li>
+                <li><a href="Categories.php">Categories</a></li>
+                <li><a href="About us.php">About us</a></li>
+                <li><a href="Contact us.php">Contact us</a></li>
+		
+         </ul>
+      
+   </div>
+   <div id="Deals">
+       <div id ="Dealsmenu">
+            <ul>
+                    <li onclick="deals_show('deal',3)">Top Deals</li>
+                    <li onclick="deals_show('edeal',3)">Electronics Deals</li>
+    	              <li>Daily Deals </li>
+                    <li>Tuesday Deal</li>
+                    <li>Buy one get one free</li>
+                 
+                   
+            </ul>
+       </div>
+    
+               <div id="dealsrow" class="row">
+                  <div id="dealsleftcolumn" class="leftcolumn">
+                  </div>
+                  <div id="dealsrightcolumn" class="rightcolumn">
+                  </div>
+               </div> 
+     
+   </div>
+
+ <div id="ffooter">
+       <div id="linklogos">
+       <a href="https://www.facebook.com/kazyonegypt/"><img src = "Images/facebooklogo.png"></a>
+       </div>
+       <div id ="hotline">
+       <p>19609
+       <img src= "Images/hotlineicon.png">
+       </p>
+       </div>
+      
+</div> 
+
+
+
+
+
+
+
+ </body>
+
+
+
+
+
+
+
+
+</html>
